@@ -8,4 +8,4 @@ jobs:
           run: |
             echo "Cloning repository..."
             echo "${{toJson(github) }}"
-            git clone ${{ github.repository }} --branch ${{ github.ref }} --single-branch
+            git clone https://github.com/${{ github.repository }}.git
