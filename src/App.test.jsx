@@ -8,11 +8,11 @@ test('renders Github Actions heading', () => {
   const headingElement = screen.getByText(/Github Actions/i);
   expect(headingElement).toBeInTheDocument();
 });
-
+// Test to check if the component renders without crashing
 test('contains an h1 element', () => {
   const { container } = render(<App />);
-  const h1Element = container.querySelector('h1');
-  expect(h1Element).not.toBeInTheDocument();
+  const h1Element = container.querySelector('h1')
+  expect(h1Element).toBeInTheDocument();
 });
 
 test('contains an h2 element', () => {
