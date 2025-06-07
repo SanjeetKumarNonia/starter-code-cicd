@@ -1,0 +1,11 @@
+name: Deploy Dist
+on: [push, workflow_dispatch]
+jobs:
+    test:
+        runs-on: ubuntu-latest
+        steps: 
+        - name: Get Code
+          run: |
+            echo "Cloning repository..."
+            echo "${{toJson(github) }}"
+            git clone ${{ github.repository }} --branch ${{ github.ref }} --single-branch
